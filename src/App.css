@@ -1,0 +1,189 @@
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Inter,sans-serif;
+}
+
+/* animated gradient background */
+
+.page{
+
+min-height:100vh;
+width:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(
+-45deg,
+#3b82f6,
+#06b6d4,
+#6366f1,
+#0ea5e9
+);
+
+background-size:400% 400%;
+
+animation:gradientMove 12s ease infinite;
+
+color:white;
+
+}
+
+/* animation */
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* center content */
+
+.content{
+
+text-align:center;
+
+padding:40px;
+
+max-width:800px;
+
+}
+
+/* title */
+
+.title{
+
+font-size:42px;
+margin-bottom:30px;
+
+}
+
+/* quote */
+
+.quote{
+
+font-size:34px;
+line-height:1.6;
+margin-bottom:10px;
+
+}
+
+/* author */
+
+.author{
+
+color:#e2e8f0;
+margin-bottom:25px;
+
+}
+
+/* buttons */
+
+button{
+
+border:none;
+
+padding:14px 24px;
+
+margin:10px;
+
+border-radius:10px;
+
+font-size:16px;
+
+cursor:pointer;
+
+background:white;
+color:#1e293b;
+
+transition:all .25s ease;
+
+}
+
+/* hover */
+
+button:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+
+/* liked */
+
+button.liked{
+
+background:#ef4444;
+color:white;
+
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.quote{
+font-size:26px;
+}
+
+.title{
+font-size:34px;
+}
+
+}
+
+@media(max-width:480px){
+
+.quote{
+font-size:22px;
+}
+
+button{
+width:100%;
+margin:6px 0;
+}
+
+}
+
+.page{
+  position:relative;
+  padding:40px;
+  text-align:center;
+}
+
+.pageBtn{
+  position:absolute;
+  top:20px;
+  right:20px;
+  font-size:20px;
+}
+
+.backBtn{
+  position:absolute;
+  top:20px;
+  left:20px;
+}
+
+.favCard{
+  border:1px solid #ddd;
+  padding:15px;
+  margin:10px auto;
+  width:60%;
+  border-radius:8px;
+}
